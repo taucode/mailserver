@@ -1,12 +1,9 @@
 dotnet restore
 
-dotnet clean --configuration Debug
-dotnet clean --configuration Release
+dotnet build TauCode.MailServer.sln -c Debug
+dotnet build TauCode.MailServer.sln -c Release
 
-dotnet build --configuration Debug
-dotnet build --configuration Release
-
-dotnet test -c Debug .\test\TauCode.MailServer.Tests\TauCode.MailServer.Tests.csproj
-dotnet test -c Release .\test\TauCode.MailServer.Tests\TauCode.MailServer.Tests.csproj
+dotnet test TauCode.MailServer.sln -c Debug
+dotnet test TauCode.MailServer.sln -c Release
 
 nuget pack nuget\TauCode.MailServer.nuspec
