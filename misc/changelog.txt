@@ -1,0 +1,4 @@
+﻿2024-10-29
+==========
+    1. Resurrected.
+    2. Ported to .NET 8
